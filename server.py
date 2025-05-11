@@ -1,6 +1,8 @@
 from flask import Flask, render_template, redirect, url_for
 import subprocess
 import os
+import sys
+
 
 app = Flask(__name__)
 
@@ -11,13 +13,20 @@ def index():
 @app.route('/start-opencv', methods=['GET','POST'])
 def start_face_detection():
     # subprocess.Popen(["py", "-3.10", "emotion_face.py"])
-    subprocess.Popen(["python3.10", "emotion_face.py"])
+    subprocess.Popen([sys.executable, "emotion_face.py"])
+
 
     return redirect(url_for('index'))
 
 @app.route('/open-gradio')
 def open_gradio():
     return redirect("https://f46f657adc2f8c609c.gradio.live/")
+
+@app.route("/debug-version")
+def debug_version():
+    import sys
+    return f"Python Version: {sys.version}"
+
 
 if __name__ == '__main__':
     # app.run(debug=True)
