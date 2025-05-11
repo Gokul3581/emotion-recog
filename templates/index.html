@@ -1,0 +1,50 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Emotion Classifier</title>
+        <style>
+            body {
+                background-color: #000;
+                color: #f0f0f0;
+                font-family: 'Segoe UI', sans-serif;
+                text-align: center;
+                padding-top: 50px;
+            }
+
+            h1 {
+                font-size: 3em;
+                color: #00FFFF;
+            }
+
+            p {
+                font-size: 1.2em;
+                margin-bottom: 40px;
+                color: #cfcfcf;
+            }
+
+            .button {
+                padding: 15px 30px;
+                margin: 15px;
+                font-size: 1em;
+                border: none;
+                border-radius: 10px;
+                cursor: pointer;
+                color: white;
+                background-color: #1e90ff;
+                transition: background-color 0.3s;
+            }
+
+            .button:hover {
+                background-color: #0066cc;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Emotion Classifier</h1>
+        <p>This project detects human emotions using facial expressions (OpenCV) and voice-based analysis (Gradio interface).</p>
+
+        <button class="button" onclick="window.location.href='/start-opencv'">Start OpenCV Emotion Detection</button>
+        <button class="button" onclick="window.location.href='/open-gradio'">Go to Gradio App</button>
+    </body>
+    </html>
