@@ -10,7 +10,9 @@ def index():
 
 @app.route('/start-opencv', methods=['GET','POST'])
 def start_face_detection():
-    subprocess.Popen(["py", "-3.10", "emotion_face.py"])
+    # subprocess.Popen(["py", "-3.10", "emotion_face.py"])
+    subprocess.Popen(["python3.10", "emotion_face.py"])
+
     return redirect(url_for('index'))
 
 @app.route('/open-gradio')
