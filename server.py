@@ -20,7 +20,7 @@ def start_face_detection():
 
 @app.route('/open-gradio')
 def open_gradio():
-    return redirect("https://f46f657adc2f8c609c.gradio.live/")
+    return redirect("https://huggingface.co/spaces/gokul968/emotion-detection")
 
 @app.route("/debug-version")
 def debug_version():
