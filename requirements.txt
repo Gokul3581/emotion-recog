@@ -3,4 +3,4 @@ opencv-python
 deepface
 gunicorn
 numpy
-python-3.10.12
+
